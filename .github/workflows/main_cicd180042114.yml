@@ -6,7 +6,7 @@ name: Build and deploy Node.js app to Azure Web App - CiCd180042114
 on:
   push:
     branches:
-      - main
+      - master
   workflow_dispatch:
 
 jobs:
@@ -21,7 +21,7 @@ jobs:
         with:
           node-version: '14.x'
 
-      - name: npm install, build, and test
+      - name: npm install
         run: |
           npm install
       
